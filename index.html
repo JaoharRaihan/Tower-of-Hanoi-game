@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tower of Hanoi</title>
-    <script src="style.js"></script>
+    <script src="c.js"></script>
 
     <style>
         .div1,
@@ -100,7 +100,7 @@
     <body>
         
         <h1 style="text-align: center;">Welcome to Tower of Hanoi! </h1>
-        <div class="div1" id="d1">
+        <div class="div1" id="d2">
     
             <button type="button"  class="btn btn-large btn-block btn-primary" id="0"onclick="">2</button>
             <button type="button" class="btn btn-large btn-block btn-primary" id="1"onclick="">4</button>
@@ -113,12 +113,12 @@
         <div class="div3" id="d3"></div>
         <div class="div4"  >
     
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="oneto2()">1->2</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto3()">2->3</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto1()">3->1</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto2()">3->2</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto1()">2->1</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="oneto3()">1->3</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button12()">1->2</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button23()">2->3</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button31()">3->1</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button32()">3->2</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button21()">2->1</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="button13()">1->3</button>
             </div>
     
         <div class="flex-parent jc-center">
