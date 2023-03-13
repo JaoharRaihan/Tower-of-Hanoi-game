@@ -1,0 +1,30 @@
+<!-- HTML code with two div elements and an element to be moved -->
+<div id="div-a">
+    <p>Click the button to move me to div B</p>
+  </div>
+  
+  <div id="div-b">
+    <p>This is div B</p>
+  </div>
+  
+  <button onclick="moveElement()">Move Element</button>
+  
+  <script>
+    function moveElement() {
+      // get the element to be moved
+      const element = document.querySelector("#div-a p");
+  
+      // get the div where the element will be moved to
+      const targetDiv = document.getElementById("div-b");
+  
+      // check if the element and target div exist
+      if (element && targetDiv) {
+        // remove the element from its current div
+        element.parentNode.removeChild(element);
+  
+        // append the element to the target div
+        targetDiv.appendChild(element);
+      }
+    }
+  </script>
+  

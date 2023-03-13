@@ -1,74 +1,139 @@
-// Get the div elements where disks can be moved to
-const d1 = document.getElementById("d1");
-const d2 = document.getElementById("d2");
-const d3 = document.getElementById("d3");
+function moveElement() {
+  // get the element to be moved
+  const element = document.querySelector("#d1 button");
 
-// Get the buttons for moving disks
-const button12 = document.querySelector("#div4 button:nth-of-type(1)");
-const button23 = document.querySelector("#div4 button:nth-of-type(2)");
-const button31 = document.querySelector("#div4 button:nth-of-type(3)");
-const button32 = document.querySelector("#div4 button:nth-of-type(4)");
-const button21 = document.querySelector("#div4 button:nth-of-type(5)");
-const button13 = document.querySelector("#div4 button:nth-of-type(6)");
-function shuffleArray(array) 
-{
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d2");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
   }
 }
-// Keep track of which disk is selected
-let selectedDisk = null;
 
-// Add click event listeners to disks to select them
-const disks = document.querySelectorAll(".div1 button");
-disks.forEach((disk) => {
-  disk.addEventListener("click", () => {
-    selectedDisk = disk;
-  });
-});
+function two3() {
+  // get the element to be moved
+  const element = document.querySelector("#d2 button");
 
-// Add click event listeners to buttons to move disks
-button12.addEventListener("click", () => {
-  if (selectedDisk && d1.contains(selectedDisk)) {
-    d2.appendChild(selectedDisk);
-    selectedDisk = null;
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d3");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
   }
-});
+}
+function threeto1() {
+  // get the element to be moved
+  const element = document.querySelector("#d3 button");
 
-button23.addEventListener("click", () => {
-  if (selectedDisk && d2.contains(selectedDisk)) {
-    d3.appendChild(selectedDisk);
-    selectedDisk = null;
-  }
-});
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d1");
 
-button31.addEventListener("click", () => {
-  if (selectedDisk && d3.contains(selectedDisk)) {
-    d1.appendChild(selectedDisk);
-    selectedDisk = null;
-  }
-});
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
 
-button32.addEventListener("click", () => {
-  if (selectedDisk && d3.contains(selectedDisk)) {
-    d2.appendChild(selectedDisk);
-    selectedDisk = null;
+    // append the element to the target div
+    targetDiv.appendChild(element);
   }
-});
+}
 
-button21.addEventListener("click", () => {
-  if (selectedDisk && d2.contains(selectedDisk)) {
-    d1.appendChild(selectedDisk);
-    selectedDisk = null;
-  }
-});
+function twoto3() {
+  // get the element to be moved
+  const element = document.querySelector("#d2 button");
 
-button13.addEventListener("click", () => {
-  if (selectedDisk && d1.contains(selectedDisk)) {
-    d3.appendChild(selectedDisk);
-    selectedDisk = null;
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d3");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
   }
-});
+}
+
+function threeto2() {
+  // get the element to be moved
+  const element = document.querySelector("#d3 button");
+
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d2");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
+  }
+}
+function twoto1() {
+  // get the element to be moved
+  const element = document.querySelector("#d2 button");
+
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d1");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
+  }
+}
+function oneto3() {
+  // get the element to be moved
+  const element = document.querySelector("#d1 button");
+
+  // get the div where the element will be moved to
+  const targetDiv = document.getElementById("d3");
+
+  // check if the element and target div exist
+  if (element && targetDiv) {
+    // remove the element from its current div
+    element.parentNode.removeChild(element);
+
+    // append the element to the target div
+    targetDiv.appendChild(element);
+  }
+}
+
+function randomizeElements(divId) {
+  // get the div element by its ID
+  const div = document.getElementById(divId);
+
+  // get an array of the child nodes in the div
+  const children = Array.from(div.childNodes);
+
+  // shuffle the array of child nodes using the Fisher-Yates algorithm
+  for (let i = children.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [children[i], children[j]] = [children[j], children[i]];
+  }
+
+  // append the shuffled child nodes back to the div in their new order
+  for (let i = 0; i < children.length; i++) {
+    div.appendChild(children[i]);
+  }
+}
+
+
+function resetForm() {
+  document.getElementById("d1").reset();
+}
