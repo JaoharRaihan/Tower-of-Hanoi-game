@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+l lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,7 +8,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tower of Hanoi</title>
     <script src="c.js"></script>
-
+  <script>
+    function shuffle(array) {
+      var m = array.length, t, i;
+    
+      // While there remain elements to shuffle…
+      while (m) {
+    
+        // Pick a remaining element…
+        i = Math.floor(Math.random() * m--);
+    
+        // And swap it with the current element.
+        t = array[m];
+        array[m] = array[i];
+        array[i] = t;
+      }
+    
+      return array;
+    }
+  </script>
+  <script>
+    function myFunction() {
+      const list = document.getElementById("myList");
+      list.removeChild(list.firstElementChild);
+    }
+    </script>
+    
+    <script>
+      function myFunction() {
+      
+      // Create an "li" node:
+      const node = document.createElement("li");
+      
+      // Create a text node:
+      const textnode = document.createTextNode("Water");
+      
+      // Append the text node to the "li" node:
+      node.appendChild(textnode);
+      
+      // Append the "li" node to the list:
+      document.getElementById("myList").appendChild(node);
+      }
+      </script>
     <style>
         .div1,
         .div2,

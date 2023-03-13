@@ -10,7 +10,15 @@ const button31 = document.querySelector("#div4 button:nth-of-type(3)");
 const button32 = document.querySelector("#div4 button:nth-of-type(4)");
 const button21 = document.querySelector("#div4 button:nth-of-type(5)");
 const button13 = document.querySelector("#div4 button:nth-of-type(6)");
-
+function shuffleArray(array) 
+{
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = array[i];
+    array[i] = array[j];
+    array[j] = temp;
+  }
+}
 // Keep track of which disk is selected
 let selectedDisk = null;
 
