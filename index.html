@@ -101,7 +101,7 @@
         
         <h1 style="text-align: center;">Welcome to Tower of Hanoi! </h1>
         <div class="div1" id="d1">
-    
+    <h1 style="text-align: center;">A</h1>
             <button type="button"  class="btn btn-large btn-block btn-primary" id="0"onclick="">2</button>
             <button type="button" class="btn btn-large btn-block btn-primary" id="1"onclick="">4</button>
             <button type="button" class="btn btn-large btn-block btn-primary" id="2"onclick="">3</button>
@@ -109,22 +109,27 @@
     
             
         </div>
-        <div class="div2" id="d2"></div>
-        <div class="div3" id="d3"></div>
+        <div class="div2" id="d2">
+<h1 style="text-align: center;">B</h1>
+
+        </div>
+        <div class="div3" id="d3">
+          <h1 style="text-align: center;">C</h1>
+        </div>
         <div class="div4"  >
     
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="moveElement()">1->2</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto3()">2->3</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto1()">3->1</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto2()">3->2</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto1()">2->1</button>
-            <button type="button" class="btn btn-large btn-block btn-default" onclick="oneto3()">1->3</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="moveElement()">A to B</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto3()">B to C</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto1()">C to A</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="threeto2()">C to B</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="twoto1()">B to A</button>
+            <button type="button" class="btn btn-large btn-block btn-default" onclick="oneto3()">A to C</button>
             </div>
     
         <div class="flex-parent jc-center">
     
             <button type="button" class="green margin-right" id="reset"  onclick="window.location.reload()">Reset</button>
-            <button type="button" class="button2" id="check" onclick="check()">Check 🔔</button>
+            <button type="button" class="button2" id="check" onclick="alartyo()">Check 🔔</button>
         </div>
 
     <script>
@@ -277,6 +282,11 @@ function randomizeElements(divId) {
 function resetForm() {
   document.getElementById("d1").reset();
 }
+
+function alartyo() {
+  alert("পারিনাই 🥺🥺🥺 ");
+}
+
 
     </script>
 </body>
